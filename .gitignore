@@ -1,0 +1,10 @@
+config/config.php
+public/img/
+public/landingpage/
+public/mails/
+public/bandeau/
+public/coreg/
+public/doc/
+helpers/logs/
+.htpasswd
+test/
