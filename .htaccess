@@ -1,0 +1,30 @@
+# Activation du mod rewrite d'Apache
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^([a-z]{2})$ /index.php?f=home&a=index [L,QSA]
+RewriteRule ^([a-z]{2})/$ /$1 [L,QSA,R=301]
+RewriteRule ^ws/([a-zA-Z0-9-]+)$ /index.php?f=common&c=ws&a=$1 [L,QSA]
+RewriteRule ^adminws/([a-zA-Z0-9-]+)$ /index.php?f=admin&c=ws&a=$1 [L,QSA]
+
+RewriteRule ^inscription$ /index.php?f=account&a=inscription [L,QSA]
+RewriteRule ^inscription/$ /inscription [L,QSA,R=301]
+
+RewriteRule ^connexion$ /index.php?f=account&a=connexion [L,QSA]
+RewriteRule ^connexion/$ /connexion [L,QSA,R=301]
+
+RewriteRule ^mon-compte.php$ /communaute/mon-compte [L,QSA,R=301]
+RewriteRule ^authentification.php$ /communaute/mon-compte [L,QSA,R=301]
+
+RewriteRule ^mdp-oublie.php$ /communaute/mon-compte?forgot-password=true [L,QSA,R=301]
+
+
+RewriteRule ^account/viewprofil$ /index.php?f=auteur&a=viewProfil [L,QSA]
+RewriteRule ^account/viewprofil/([0-9]+)/$ /index.php?f=auteur&a=viewProfil&idUser=$1  [L,QSA]
+RewriteRule ^account/viewprofil/([0-9]+)/page([0-9]+)$ /index.php?f=auteur&a=viewProfil&page=$2&idUser=$1  [L,QSA]
+
+####### ERROR #######
+ErrorDocument 404 /index.php?f=error&a=error&type=404
+ErrorDocument 500 /index.php?f=error&a=error&type=500
