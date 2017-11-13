@@ -7,12 +7,15 @@
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="/public/css/reset.css" />
+    
+    <script src="/public/js/jquery-3.2.1.js"></script>
+		<script src="/public/css/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/css/bootstrap/css/bootstrap.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/public/css/style.css" />
 
-		<script type="text/javascript" src="/public/js/jquery-3.2.1.js"></script>
-		<script type="text/javascript" src="/public/css/bootstrap/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/public/css/bootstrap/css/bootstrap.min.css" />
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="Stylesheet" href="/public/js/jquery-ui/jquery-ui.css" />
+    <script src="/public/js/jquery-ui/jquery-ui.js"></script>
 	</head>
 
 	<body class="">
